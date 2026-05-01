@@ -1,0 +1,38 @@
+{
+    "dune": {
+        "branch": "main",
+        "description": "A composable build system for OCaml.",
+        "homepage": "https://dune.build/",
+        "owner": "ocaml",
+        "repo": "dune",
+        "rev": "1ba3c75cc9c9ef18bce1a4e1a2854cc424d0eafc",
+        "sha256": "0a0nbhrzmvr2vdkiji7d030ck37fmac5jpdfb0r2nardyyk75yfg",
+        "type": "tarball",
+        "url": "https://github.com/ocaml/dune/archive/1ba3c75cc9c9ef18bce1a4e1a2854cc424d0eafc.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "flake-compat": {
+        "branch": "master",
+        "description": null,
+        "homepage": null,
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "5edf11c44bc78a0d334f6334cdaf7d60d732daab",
+        "sha256": "0yqfa6rx8md81bcn4szfp0hjq2f3h9i8zjzhqqyfqdkrj5559nmw",
+        "type": "tarball",
+        "url": "https://github.com/edolstra/flake-compat/archive/5edf11c44bc78a0d334f6334cdaf7d60d732daab.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "nixos-unstable",
+        "description": "Nix Packages collection",
+        "homepage": null,
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c0b0e0fddf73fd517c3471e546c0df87a42d53f4",
+        "sha256": "0hqb404lk3c7sqcvgjd5dzf2632ikhv9lwshq5q3j5vdwg86x03j",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/c0b0e0fddf73fd517c3471e546c0df87a42d53f4.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
