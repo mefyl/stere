@@ -1,0 +1,4 @@
+(library
+ (name stere)
+ (public_name stere)
+ (libraries context fmt hmap logs uuidm))

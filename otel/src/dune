@@ -1,0 +1,21 @@
+(library
+ (name stere_otel)
+ (public_name stere-otel)
+ (libraries
+  stere
+  opentelemetry
+  pbrt
+  cohttp
+  cohttp-lwt
+  cohttp-lwt-unix
+  uri
+  uuidm
+  logs
+  fmt
+  timmy
+  timmy-lwt
+  ptime.clock.os
+  schematic
+  base
+  acid-lwt
+  lwt))

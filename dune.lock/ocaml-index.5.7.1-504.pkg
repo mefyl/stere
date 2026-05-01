@@ -1,0 +1,34 @@
+(version 5.7.1-504)
+
+(build
+ (all_platforms
+  ((action
+    (progn
+     (when %{pkg-self:dev} (run dune subst))
+     (run
+      dune
+      build
+      -p
+      %{pkg-self:name}
+      -j
+      %{jobs}
+      --promote-install-files=false
+      @install)
+     (run
+      dune
+      install
+      -p
+      %{pkg-self:name}
+      --create-install-files
+      %{pkg-self:name}))))))
+
+(depends
+ (all_platforms
+  (dune ocaml merlin-lib)))
+
+(source
+ (fetch
+  (url
+   https://github.com/ocaml/merlin/releases/download/v5.7.1-504/merlin-5.7.1-504.tbz)
+  (checksum
+   sha256=139b073cf914b38b725c54f75b8b642f654c3498d0a4ba8cfa831ff02a8970d5)))

@@ -1,0 +1,19 @@
+(version 4.1)
+
+(build
+ (all_platforms
+  ((action
+    (progn
+     (when %{pkg-self:dev} (run dune subst))
+     (run dune build -p %{pkg-self:name} -j %{jobs} @install))))))
+
+(depends
+ (all_platforms
+  (dune ocaml yojson base64)))
+
+(source
+ (fetch
+  (url
+   https://github.com/mransan/ocaml-protoc/releases/download/v4.1/ocaml-protoc-4.1.tbz)
+  (checksum
+   sha256=89ea27f87d96fda79fd7a8f86a9e3ac978bdaa9c2ab989442d110123104bed3f)))

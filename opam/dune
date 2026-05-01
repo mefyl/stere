@@ -1,0 +1,301 @@
+(rule
+ (target stere.%{version:stere}.opam)
+ (deps
+  (:opam ../stere.opam))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (cat %{opam})
+    (run
+     git
+     log
+     "--pretty=url { src: \"git://git@gitlab.routine.co:routine/stere#%H\" }"
+     -n1)))))
+
+(rule
+ (target stere-ios.opam)
+ (mode
+  (promote (until-clean)))
+ (action
+  (with-stdout-to
+   %{target}
+   (run
+    %{workspace_root}/.logistic/ci/dune/dune_sak.exe
+    rewrite-ios
+    --input
+    %{dep:../stere.opam}
+    --cross
+    stere,stere-otel,fmt,logs,lwt,opentelemetry
+    --cross-both
+    ""
+    --cross-exclude
+    ""))))
+
+(rule
+ (target stere-ios.%{version:stere}.opam)
+ (deps
+  (:opam stere-ios.opam))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (cat %{opam})
+    (run
+     git
+     log
+     "--pretty=url { src: \"git://git@gitlab.routine.co:routine/stere#%H\" }"
+     -n1)))))
+
+(rule
+ (target stere-macos.opam)
+ (mode
+  (promote (until-clean)))
+ (action
+  (with-stdout-to
+   %{target}
+   (run
+    %{workspace_root}/.logistic/ci/dune/dune_sak.exe
+    rewrite-macos
+    --input
+    %{dep:../stere.opam}
+    --cross
+    stere,stere-otel,fmt,logs,lwt,opentelemetry
+    --cross-both
+    ""
+    --cross-exclude
+    ""))))
+
+(rule
+ (target stere-macos.%{version:stere}.opam)
+ (deps
+  (:opam stere-macos.opam))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (cat %{opam})
+    (run
+     git
+     log
+     "--pretty=url { src: \"git://git@gitlab.routine.co:routine/stere#%H\" }"
+     -n1)))))
+
+(rule
+ (target stere-windows.opam)
+ (mode
+  (promote (until-clean)))
+ (action
+  (with-stdout-to
+   %{target}
+   (run
+    %{workspace_root}/.logistic/ci/dune/dune_sak.exe
+    rewrite-windows
+    --input
+    %{dep:../stere.opam}
+    --cross
+    stere,stere-otel,fmt,logs,lwt,opentelemetry
+    --cross-both
+    ""
+    --cross-exclude
+    ""))))
+
+(rule
+ (target stere-windows.%{version:stere}.opam)
+ (deps
+  (:opam stere-windows.opam))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (cat %{opam})
+    (run
+     git
+     log
+     "--pretty=url { src: \"git://git@gitlab.routine.co:routine/stere#%H\" }"
+     -n1)))))
+
+(rule
+ (target stere-android.opam)
+ (mode
+  (promote (until-clean)))
+ (action
+  (with-stdout-to
+   %{target}
+   (run
+    %{workspace_root}/.logistic/ci/dune/dune_sak.exe
+    rewrite-android
+    --input
+    %{dep:../stere.opam}
+    --cross
+    stere,stere-otel,fmt,logs,lwt,opentelemetry
+    --cross-both
+    ""
+    --cross-exclude
+    ""))))
+
+(rule
+ (target stere-android.%{version:stere}.opam)
+ (deps
+  (:opam stere-android.opam))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (cat %{opam})
+    (run
+     git
+     log
+     "--pretty=url { src: \"git://git@gitlab.routine.co:routine/stere#%H\" }"
+     -n1)))))
+
+(rule
+ (target stere-otel.%{version:stere-otel}.opam)
+ (deps
+  (:opam ../stere-otel.opam))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (cat %{opam})
+    (run
+     git
+     log
+     "--pretty=url { src: \"git://git@gitlab.routine.co:routine/stere#%H\" }"
+     -n1)))))
+
+(rule
+ (target stere-otel-ios.opam)
+ (mode
+  (promote (until-clean)))
+ (action
+  (with-stdout-to
+   %{target}
+   (run
+    %{workspace_root}/.logistic/ci/dune/dune_sak.exe
+    rewrite-ios
+    --input
+    %{dep:../stere-otel.opam}
+    --cross
+    stere,stere-otel,fmt,logs,lwt,opentelemetry
+    --cross-both
+    ""
+    --cross-exclude
+    ""))))
+
+(rule
+ (target stere-otel-ios.%{version:stere-otel}.opam)
+ (deps
+  (:opam stere-otel-ios.opam))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (cat %{opam})
+    (run
+     git
+     log
+     "--pretty=url { src: \"git://git@gitlab.routine.co:routine/stere#%H\" }"
+     -n1)))))
+
+(rule
+ (target stere-otel-macos.opam)
+ (mode
+  (promote (until-clean)))
+ (action
+  (with-stdout-to
+   %{target}
+   (run
+    %{workspace_root}/.logistic/ci/dune/dune_sak.exe
+    rewrite-macos
+    --input
+    %{dep:../stere-otel.opam}
+    --cross
+    stere,stere-otel,fmt,logs,lwt,opentelemetry
+    --cross-both
+    ""
+    --cross-exclude
+    ""))))
+
+(rule
+ (target stere-otel-macos.%{version:stere-otel}.opam)
+ (deps
+  (:opam stere-otel-macos.opam))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (cat %{opam})
+    (run
+     git
+     log
+     "--pretty=url { src: \"git://git@gitlab.routine.co:routine/stere#%H\" }"
+     -n1)))))
+
+(rule
+ (target stere-otel-windows.opam)
+ (mode
+  (promote (until-clean)))
+ (action
+  (with-stdout-to
+   %{target}
+   (run
+    %{workspace_root}/.logistic/ci/dune/dune_sak.exe
+    rewrite-windows
+    --input
+    %{dep:../stere-otel.opam}
+    --cross
+    stere,stere-otel,fmt,logs,lwt,opentelemetry
+    --cross-both
+    ""
+    --cross-exclude
+    ""))))
+
+(rule
+ (target stere-otel-windows.%{version:stere-otel}.opam)
+ (deps
+  (:opam stere-otel-windows.opam))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (cat %{opam})
+    (run
+     git
+     log
+     "--pretty=url { src: \"git://git@gitlab.routine.co:routine/stere#%H\" }"
+     -n1)))))
+
+(rule
+ (target stere-otel-android.opam)
+ (mode
+  (promote (until-clean)))
+ (action
+  (with-stdout-to
+   %{target}
+   (run
+    %{workspace_root}/.logistic/ci/dune/dune_sak.exe
+    rewrite-android
+    --input
+    %{dep:../stere-otel.opam}
+    --cross
+    stere,stere-otel,fmt,logs,lwt,opentelemetry
+    --cross-both
+    ""
+    --cross-exclude
+    ""))))
+
+(rule
+ (target stere-otel-android.%{version:stere-otel}.opam)
+ (deps
+  (:opam stere-otel-android.opam))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (cat %{opam})
+    (run
+     git
+     log
+     "--pretty=url { src: \"git://git@gitlab.routine.co:routine/stere#%H\" }"
+     -n1)))))

@@ -1,0 +1,9 @@
+(library
+ (name stere_lwt)
+ (public_name stere.lwt)
+ (optional)
+ (libraries
+  logs
+  logs.lwt
+  lwt
+  (re_export stere)))

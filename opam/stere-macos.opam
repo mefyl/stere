@@ -1,0 +1,18 @@
+opam-version: "2.0"
+version: "0.1.0"
+synopsis: "Logging library on top of Logs."
+maintainer: ["mefyl <mefyl@gruntech.org>"]
+authors: ["mefyl <mefyl@gruntech.org>"]
+license: "LGPL-3.0-or-later"
+depends: [
+  "dune" {>= "3.20"}
+  "fmt-macos"
+  "logs-macos"
+  "ocaml-macos"
+]
+depopts: ["lwt-macos"]
+build: [
+  ["dune" "subst"] {dev}
+  ["dune" "build" "-x" "macos" "-p" "stere" "-j" jobs "@install"]
+]
+x-maintenance-intent: ["(latest)"]

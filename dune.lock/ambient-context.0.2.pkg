@@ -1,0 +1,19 @@
+(version 0.2)
+
+(build
+ (all_platforms
+  ((action
+    (progn
+     (when %{pkg-self:dev} (run dune subst))
+     (run dune build -p %{pkg-self:name} -j %{jobs} @install))))))
+
+(depends
+ (all_platforms
+  (dune ocaml hmap)))
+
+(source
+ (fetch
+  (url
+   https://github.com/ocaml-tracing/ambient-context/releases/download/v0.2/ambient-context-0.2.tbz)
+  (checksum
+   sha256=f451f4ed467ef0c15f472cda1021a89e96afdf3a32970ea047faf057a01c72d3)))

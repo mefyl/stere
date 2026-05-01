@@ -1,0 +1,19 @@
+(version 0.91)
+
+(build
+ (all_platforms
+  ((action
+    (progn
+     (when %{pkg-self:dev} (run dune subst))
+     (run dune build -p %{pkg-self:name} -j %{jobs} @install))))))
+
+(depends
+ (all_platforms
+  (dune ocaml ptime hmap pbrt pbrt_yojson ambient-context mtime lwt)))
+
+(source
+ (fetch
+  (url
+   https://github.com/ocaml-tracing/ocaml-opentelemetry/releases/download/v0.91/opentelemetry-0.91.tbz)
+  (checksum
+   sha256=4aaee2025957acf71434a027bd57ee699a9ae927e6b49804fb1e999e16a03694)))

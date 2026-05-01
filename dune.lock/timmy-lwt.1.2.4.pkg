@@ -1,0 +1,19 @@
+(version 1.2.4)
+
+(build
+ (all_platforms
+  ((action
+    (progn
+     (when %{pkg-self:dev} (run dune subst))
+     (run dune build -p %{pkg-self:name} -j %{jobs} @install))))))
+
+(depends
+ (all_platforms
+  (dune ppx_here ppx_deriving logs lwt timmy)))
+
+(source
+ (fetch
+  (url
+   git+ssh://git@gitlab.routine.co/routine/timmy#c0fb24fdeb854f5c347ceec0ba5d3a66be37b2db)))
+
+(dev)

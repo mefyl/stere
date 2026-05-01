@@ -1,0 +1,31 @@
+opam-version: "2.0"
+version: "0.1.0"
+synopsis: "OpenTelemetry integration for Stere logging"
+maintainer: ["mefyl <mefyl@gruntech.org>"]
+authors: ["mefyl <mefyl@gruntech.org>"]
+license: "LGPL-3.0-or-later"
+depends: [
+  "dune" {>= "3.20"}
+  "stere-android"
+  "opentelemetry-android"
+  "pbrt"
+  "cohttp"
+  "cohttp-lwt"
+  "cohttp-lwt-unix"
+  "uri"
+  "uuidm"
+  "logs-android"
+  "fmt-android"
+  "timmy"
+  "timmy-lwt"
+  "ptime"
+  "schematic"
+  "base"
+  "acid-lwt"
+  "lwt-android"
+]
+build: [
+  ["dune" "subst"] {dev}
+  ["dune" "build" "-x" "android" "-p" "stere-otel" "-j" jobs "@install"]
+]
+x-maintenance-intent: ["(latest)"]
