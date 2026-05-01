@@ -1,4 +1,4 @@
-(version 4.1)
+(version 3.1.1)
 
 (build
  (all_platforms
@@ -14,6 +14,6 @@
 (source
  (fetch
   (url
-   https://github.com/mransan/ocaml-protoc/releases/download/v4.1/ocaml-protoc-4.1.tbz)
+   https://github.com/mransan/ocaml-protoc/releases/download/v3.1.1/ocaml-protoc-3.1.1.tbz)
   (checksum
-   sha256=89ea27f87d96fda79fd7a8f86a9e3ac978bdaa9c2ab989442d110123104bed3f)))
+   sha256=c5657fcbfcbaea361beb847f72b8a6a6f36ce9e773bf285b278a0da75f988fbc)))

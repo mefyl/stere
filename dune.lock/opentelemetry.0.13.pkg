@@ -1,4 +1,4 @@
-(version 5.7.1-504)
+(version 0.13)
 
 (build
  (all_platforms
@@ -24,11 +24,20 @@
 
 (depends
  (all_platforms
-  (dune ocaml merlin-lib)))
+  (dune
+   ocaml
+   ptime
+   hmap
+   atomic
+   thread-local-storage
+   mtime
+   pbrt
+   ambient-context
+   lwt)))
 
 (source
  (fetch
   (url
-   https://github.com/ocaml/merlin/releases/download/v5.7.1-504/merlin-5.7.1-504.tbz)
+   https://github.com/ocaml-tracing/ocaml-opentelemetry/releases/download/v0.13/opentelemetry-0.13.tbz)
   (checksum
-   sha256=139b073cf914b38b725c54f75b8b642f654c3498d0a4ba8cfa831ff02a8970d5)))
+   sha256=e29a0aa7168357ebbed0f50b1ba9374bc277b280935531e77d90183c732b98f6)))

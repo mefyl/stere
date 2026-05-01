@@ -9,7 +9,7 @@
 
 (depends
  (all_platforms
-  (dune ocaml hmap)))
+  (dune ocaml hmap thread-local-storage)))
 
 (source
  (fetch
