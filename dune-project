@@ -41,3 +41,10 @@
   base
   acid-lwt
   lwt))
+
+(pin
+ (url
+  git+https://github.com/dbuenzli/bytesrw#47bdebcbc527c264572fb5fbcc5ca606e67bcd32)
+ (package
+  (name bytesrw)
+  (version 0.3.0)))

@@ -1,2 +1,5 @@
+variables:
+  PACKAGES: "coreutils gmp-dev zstd-dev"
+
 include:
   - local: '/.logistic/ci/dune/.gitlab-ci.yml'
