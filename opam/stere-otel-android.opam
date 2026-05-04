@@ -6,9 +6,6 @@ authors: ["mefyl <mefyl@gruntech.org>"]
 license: "LGPL-3.0-or-later"
 depends: [
   "dune" {>= "3.20"}
-  "stere-android"
-  "opentelemetry-android"
-  "pbrt"
   "cohttp"
   "cohttp-lwt"
   "cohttp-lwt-unix"
@@ -16,6 +13,9 @@ depends: [
   "uuidm"
   "logs-android"
   "fmt-android"
+  "opentelemetry-android"
+  "pbrt"
+  "stere-android"
   "timmy"
   "timmy-lwt"
   "ptime"

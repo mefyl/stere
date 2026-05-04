@@ -17,16 +17,13 @@
 (package
  (name stere)
  (synopsis "Logging library on top of Logs.")
- (depends fmt logs ocaml)
+ (depends fmt hmap logs ocaml uuidm)
  (depopts lwt))
 
 (package
  (name stere-otel)
  (synopsis "OpenTelemetry integration for Stere logging")
  (depends
-  stere
-  opentelemetry
-  pbrt
   cohttp
   cohttp-lwt
   cohttp-lwt-unix
@@ -34,6 +31,9 @@
   uuidm
   logs
   fmt
+  opentelemetry
+  pbrt
+  stere
   timmy
   timmy-lwt
   ptime

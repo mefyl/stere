@@ -7,8 +7,10 @@ license: "LGPL-3.0-or-later"
 depends: [
   "dune" {>= "3.20"}
   "fmt-android"
+  "hmap"
   "logs-android"
   "ocaml-android"
+  "uuidm"
 ]
 depopts: ["lwt-android"]
 build: [

@@ -7,8 +7,10 @@ license: "LGPL-3.0-or-later"
 depends: [
   "dune" {>= "3.20"}
   "fmt-ios"
+  "hmap"
   "logs-ios"
   "ocaml-ios"
+  "uuidm"
 ]
 depopts: ["lwt-ios"]
 build: [

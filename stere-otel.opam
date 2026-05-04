@@ -7,9 +7,6 @@ authors: ["mefyl <mefyl@gruntech.org>"]
 license: "LGPL-3.0-or-later"
 depends: [
   "dune" {>= "3.20"}
-  "stere"
-  "opentelemetry"
-  "pbrt"
   "cohttp"
   "cohttp-lwt"
   "cohttp-lwt-unix"
@@ -17,6 +14,9 @@ depends: [
   "uuidm"
   "logs"
   "fmt"
+  "opentelemetry"
+  "pbrt"
+  "stere"
   "timmy"
   "timmy-lwt"
   "ptime"

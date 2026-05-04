@@ -8,8 +8,10 @@ license: "LGPL-3.0-or-later"
 depends: [
   "dune" {>= "3.20"}
   "fmt"
+  "hmap"
   "logs"
   "ocaml"
+  "uuidm"
   "odoc" {with-doc}
 ]
 depopts: ["lwt"]
